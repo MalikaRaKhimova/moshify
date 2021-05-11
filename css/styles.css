@@ -5,6 +5,7 @@
     --color-accent: #ff3400;
     --color--heading: #1b0760;
     --color-body: #918ca4; 
+    --colod-border: #ccc;
 }
 
 *, *::after, *::before {
@@ -179,7 +180,7 @@ a {
     font-size: 1.8rem;
     border-radius: 40px;
     margin: 1rem 0;
-    padding: 2.5rem 8rem;
+    padding: 2rem 7rem;
     outline: none;
     border: none;
     text-transform: uppercase;
@@ -233,6 +234,48 @@ a {
 
 @media screen and (min-width: 1024px) {
     .btn {
+        font-size: 1.5rem;
+    }
+}
+
+/* Inputs */
+.input {
+    border-radius: 30px;
+    padding: 1.5rem 3.5rem;
+    border: 1px solid var(--colod-border);
+    outline: 0;
+    color: var(--color--heading);
+    font-size: 2rem;
+}
+
+::placeholder {
+    color: #cdcbd7;
+}
+
+.input-group {
+    border: 1px solid var(--colod-border);
+    border-radius: 30px;
+    display: flex;
+}
+
+.input-group .input {
+    border: 0;
+    flex-grow: 1;
+    padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+    margin: 4px;
+    padding: 1.8rem 4rem;
+}
+
+.fas-icon {
+    font-size: 1.8rem;
+    margin-right: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+    .input {
         font-size: 1.5rem;
     }
 }

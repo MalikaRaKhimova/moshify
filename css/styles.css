@@ -159,10 +159,15 @@ a {
 .icon {
     width: 40px;
     height: 40px;
+    fill: #fff;
 }
 
 .icon--primary {
-    fill: var(--color-primary);
+    fill: var(--color-primary) !important;
+}
+
+.icon--white {
+    fill: #fff !important;
 }
 
 .icon-container {
@@ -414,7 +419,7 @@ a {
 
 .quote__line {
     position: relative;
-    bottom: 10px;
+    bottom: 15px;
 }
 
 .quote_author {
@@ -438,10 +443,43 @@ a {
     }
 }
 
+/* Grids */
+
 .grid {
     display: grid;
 }
 
-.grid--cols-2 {
-    grid-template-columns: repeat(2, 1fr);
+@media screen and (min-width: 768px) {
+    .grid--cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
+@media screen and (min-width: 1024px) {
+    .grid--cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Testimonials */
+
+.testimonial {
+    padding: 3rem;
+}
+
+.testimonial__image {
+    position: relative;
+}
+
+.testimonial__image > img {
+    width: 100%;
+}
+
+.testimonial__image > .icon-container {
+    position: absolute;
+    top: 3rem;
+    right: -32px;
+    background: var(--color-accent);
+}
+
+

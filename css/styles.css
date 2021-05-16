@@ -560,3 +560,42 @@ a {
     opacity: 1;
 }
 
+/* Block: You can generate polygon percentage using a ready platform , 
+just search for it in google - clip-path generator */
+
+.block {
+    --pading-vertical: 6rem;
+    padding: var(--pading-vertical) 2rem;
+}
+
+.block__header {
+    text-align: center;
+}
+
+.block__heading {
+    margin-top: 0;
+}
+
+.block--dark {
+    background: #000;
+    color: #7b858b;
+}
+
+.block--dark .block__heading {
+    color: #fff;
+}
+
+.block--skewed-right {
+    padding-bottom: calc(var(--pading-vertical) + 4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+
+.block--skewed-left {
+    padding-bottom: calc(var(--padding-vertical) + 4rem);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}

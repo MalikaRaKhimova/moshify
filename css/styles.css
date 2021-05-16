@@ -159,7 +159,6 @@ a {
 .icon {
     width: 40px;
     height: 40px;
-    fill: #fff;
 }
 
 .icon--primary {
@@ -528,3 +527,36 @@ a {
         grid-template-columns: 1fr auto;
     }
 }
+
+.collapsible--header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible__heading {
+    margin: 0;
+}
+
+.collapsible--header .icon {
+    fill: var(--color--heading);
+    transform: rotate(90deg);
+    transition: transform .3s;
+}
+
+.collapsible__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+    transform: rotate(180deg);
+    transition: transform .3s;
+}
+
+.collapsible--expanded .collapsible__content {
+    max-height: 100vh;
+    opacity: 1;
+}
+

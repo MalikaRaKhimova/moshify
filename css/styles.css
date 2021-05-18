@@ -19,7 +19,7 @@ html {
 
 body {
     font-size: 2.4rem;
-    font-family: Inter, 'Arial Narrow Bold', sans-serif;
+    font-family: Inter, Arial, Helvetica, sans-serif;
     color: var(--color-body);
     line-height: 1.5;
 }
@@ -598,4 +598,76 @@ just search for it in google - clip-path generator */
 .container {
     max-width: 1140px;
     margin: 0 auto;
+}
+
+/* Navbar */
+
+.nav {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+}
+
+.list {
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.list__item {
+    border-bottom: 1px solid #222;
+    padding: 0.5rem 2rem;
+}
+
+.nav .icon {
+    fill: #fff;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.nav__logo {
+    transform: translateY(5px);
+}
+
+.list__item > a {
+    color: #d2d0db;
+    transition: color .3s;
+}
+
+.list__item > a:hover {
+    color: #fff;
+}
+
+.nav__list {
+    width: 100%;
+}
+
+.nav.collapsible--expanded .nav__icon {
+    opacity: 1;
+    }
+
+@media screen and (min-width: 768px) {
+    .nav__icon {
+        display: none;
+    }
+
+    .nav__list {
+        width: auto;
+        display: flex;
+        font-size: 1.6rem;
+        max-height: 100%;
+        opacity: 1;
+        justify-content: center;
+        bottom: 0;
+    }
+
+    .list__item {
+        border: none;
+    }
+
+    .nav {
+        align-items: center;
+    }
 }

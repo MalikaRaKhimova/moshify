@@ -27,6 +27,8 @@ body {
 /* Header texts */
 h1, h2, h3 {
     color: var(--color--heading);
+    margin-bottom: 1rem;
+    line-height: 1.1;
 }
 
 h1 {
@@ -241,6 +243,8 @@ a {
     padding-left: 6rem;
     padding-right: 6rem;
 }
+
+
 
 @media screen and (min-width: 1024px) {
     .btn {
@@ -596,8 +600,9 @@ just search for it in google - clip-path generator */
 }
 
 .container {
-    max-width: 1140px;
+    min-width: 1140px;
     margin: 0 auto;
+  
 }
 
 /* Navbar */
@@ -670,4 +675,29 @@ just search for it in google - clip-path generator */
     .nav {
         align-items: center;
     }
+}
+
+/* Hero */
+.hero {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.hero__tagline {
+    font-size: 2rem;
+    color: #b9c3cf;
+    letter-spacing: 1px;
+    margin: 2rem 0 5rem;
+}
+
+.hero__image {
+    width: 100%;
+    transform: translateY(-90px);
+}
+
+@media screen and (min-width: 768px) {
+    .hero__content {
+        text-align: left;
+        align-self: center;
+    }
+
 }

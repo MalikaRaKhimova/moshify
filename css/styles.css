@@ -197,6 +197,10 @@ a {
     cursor: pointer;
 }
 
+.btn .fas-icon {
+    vertical-align: middle;
+}
+
 .btn--primary {
     background: var(--color-primary);
     color: #fff;
@@ -600,7 +604,7 @@ just search for it in google - clip-path generator */
 }
 
 .container {
-    min-width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
   
 }
@@ -695,9 +699,49 @@ just search for it in google - clip-path generator */
 }
 
 @media screen and (min-width: 768px) {
+    .hero {
+        padding-top: 0;
+    }
+    
     .hero__content {
         text-align: left;
         align-self: center;
     }
 
+}
+
+/* Domain Block */
+
+.domain__item {
+    color: var(--color-body-darker);
+    padding: 2rem 0;
+}
+
+.domain--input {
+    border: 0;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    margin: 0 auto;
+    max-width: 670px;
+}
+
+.domain--input > .input {
+    padding-left: 3rem;
+}
+
+.block-domain__prices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    margin: 5rem auto;
+    color: var(--color--heading);
+    font-size: 1.6rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 800px;
+}
+
+@media screen and (min-width: 768px) {
+    .block-domain__prices {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
 }

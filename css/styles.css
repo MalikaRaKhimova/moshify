@@ -163,6 +163,11 @@ a {
     height: 40px;
 }
 
+.icon--small {
+    width: 30px;
+    height: 30px;
+}
+
 .icon--primary {
     fill: var(--color-primary) !important;
 }
@@ -281,11 +286,12 @@ a {
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 1rem;
+    width: 0;
 }
 
 .input-group .btn {
     margin: 4px;
-    padding: 1.8rem 4rem;
+    padding: 1.8rem 4vw;
 }
 
 .fas-icon {
@@ -411,6 +417,7 @@ a {
 
 .media {
     display: flex;
+    margin-bottom: 4rem;
 }
 
 .media__image {
@@ -612,6 +619,12 @@ just search for it in google - clip-path generator */
     color: #7b858b;
 }
 
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
+    color: #fff;
+}
+
 .block--dark .block__heading {
     color: #fff;
 }
@@ -639,7 +652,8 @@ just search for it in google - clip-path generator */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 1rem 2rem;
+    padding: 0 2rem;
+    align-items: center;
 }
 
 .list {
@@ -673,6 +687,7 @@ just search for it in google - clip-path generator */
 
 .nav__list {
     width: 100%;
+    margin: 0;
 }
 
 .nav.collapsible--expanded .nav__icon {
@@ -752,7 +767,7 @@ just search for it in google - clip-path generator */
 
 .block-domain__prices {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 6rem);
     margin: 5rem auto;
     color: var(--color--heading);
@@ -769,6 +784,10 @@ just search for it in google - clip-path generator */
 }
 
 /* Plans Block */
+
+.block-plans {
+    padding-top: 0;
+} 
 
 .block-plans .grid{
     gap: 8rem 4rem;
@@ -807,7 +826,7 @@ just search for it in google - clip-path generator */
 }
 
 /* Showcase Block */
-.block-showcase__image > img {
+.block-showcase img {
     width: 100%;
   }
 
@@ -827,7 +846,7 @@ just search for it in google - clip-path generator */
     .block-showcase__image {
       justify-self: end;
     }
-  
+    
     .block-showcase__image > img {
       width: auto;
       max-width: 700px;
